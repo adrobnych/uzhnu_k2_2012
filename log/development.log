@@ -1098,3 +1098,298 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-19 17:42:34 +0300
 Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (175.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (110.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateHumanNames (20121003140527)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "human_names" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121003140527')[0m
+  [1m[35m (198.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("human_names")[0m
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 03 17:16:10 +0300 2012
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant HomeController::HumanNames):
+  app/controllers/home_controller.rb:3:in `index'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 03 17:16:35 +0300 2012
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/home/coder/Desktop/edu/K_2/uzhnu_k2_2012/app/models/human_name.rb:5: syntax error, unexpected '['
+  	all.[rand(count)].name
+  	     ^
+/home/coder/Desktop/edu/K_2/uzhnu_k2_2012/app/models/human_name.rb:5: syntax error, unexpected ']', expecting kEND
+  	all.[rand(count)].name
+  	                 ^):
+  app/controllers/home_controller.rb:3:in `index'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 03 17:16:58 +0300 2012
+Processing by HomeController#index as HTML
+  [1m[36mHumanName Load (0.1ms)[0m  [1mSELECT "human_names".* FROM "human_names" [0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "human_names" 
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Compiled jquery.js  (37ms)  (pid 7081)
+Compiled jquery_ujs.js  (0ms)  (pid 7081)
+Compiled application.js  (79ms)  (pid 7081)
+Completed 200 OK in 126ms (Views: 88.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Oct 03 17:16:58 +0300 2012
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Oct 03 17:16:59 +0300 2012
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Oct 03 17:16:59 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Oct 03 17:16:59 +0300 2012
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 03 17:17:06 +0300 2012
+Processing by HomeController#index as HTML
+  [1m[36mHumanName Load (0.1ms)[0m  [1mSELECT "human_names".* FROM "human_names" [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "human_names" 
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Oct 03 17:17:06 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:06 +0300 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:06 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:06 +0300 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Processing by HomeController#index as HTML
+  [1m[36mHumanName Load (0.2ms)[0m  [1mSELECT "human_names".* FROM "human_names" [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "human_names" 
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Processing by HomeController#index as HTML
+  [1m[36mHumanName Load (0.3ms)[0m  [1mSELECT "human_names".* FROM "human_names" [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "human_names" 
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Processing by HomeController#index as HTML
+  [1m[36mHumanName Load (0.2ms)[0m  [1mSELECT "human_names".* FROM "human_names" [0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "human_names" 
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Processing by HomeController#index as HTML
+  [1m[36mHumanName Load (0.2ms)[0m  [1mSELECT "human_names".* FROM "human_names" [0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "human_names" 
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:07 +0300 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 03 17:17:08 +0300 2012
+Processing by HomeController#index as HTML
+  [1m[36mHumanName Load (0.2ms)[0m  [1mSELECT "human_names".* FROM "human_names" [0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "human_names" 
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Oct 03 17:17:08 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:08 +0300 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:08 +0300 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:08 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 03 17:17:08 +0300 2012
+Processing by HomeController#index as HTML
+  [1m[36mHumanName Load (0.3ms)[0m  [1mSELECT "human_names".* FROM "human_names" [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "human_names" 
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Oct 03 17:17:08 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:08 +0300 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:08 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:08 +0300 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 03 17:17:09 +0300 2012
+Processing by HomeController#index as HTML
+  [1m[36mHumanName Load (0.3ms)[0m  [1mSELECT "human_names".* FROM "human_names" [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "human_names" 
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Oct 03 17:17:09 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:09 +0300 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:09 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:09 +0300 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 03 17:17:10 +0300 2012
+Processing by HomeController#index as HTML
+  [1m[36mHumanName Load (0.3ms)[0m  [1mSELECT "human_names".* FROM "human_names" [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "human_names" 
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Oct 03 17:17:10 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:10 +0300 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:10 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Oct 03 17:17:10 +0300 2012
+Served asset /jquery.js - 304 Not Modified (0ms)

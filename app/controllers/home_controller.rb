@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-  	@name = Girl.names[rand(4)]
+  	@name = HumanName.random_name
   end
 end
